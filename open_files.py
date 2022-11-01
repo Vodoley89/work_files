@@ -1,4 +1,5 @@
-# Задание1
+# Задание1ggg
+import os
 import pprint
 
 cook_book = {}
@@ -33,7 +34,34 @@ def get_shop_list_by_dishes(dishes, person_count):
 
 print(get_shop_list_by_dishes(["Омлет", 'Запеченный картофель'], 7))
 
+
 # Заддание3
 
-import os
+def open_files(*files):
+    dict_line = {}
+    for file in files:
+        with open(file, encoding='utf-8') as f:
+            lines = f.readlines()
+            dict_line.update({file: len(lines)})
+        dict_line2 = {}
+        for i in sorted(dict_line, key=dict_line.get):
+            dict_line2[i] = dict_line[i]
 
+    return dict_line2
+
+
+print(open_files('1.txt', '2.txt', '3.txt'))
+
+
+def reader_files(*files):
+    dict_txt = {}
+    for i in open_files('1.txt', '2.txt', '3.txt'):
+        with open(i, encoding='utf-8') as object:
+            f = object.readlines()
+            dict_txt.update({i: f})
+    for key, val in dict_txt.items():
+        with open('total.txt', 'a', encoding='utf-8') as total_file:
+            total_file.writelines(dict_txt)
+        print(f'{key}\n{len(val)}\n{str(val)}')
+    return
+reader_files('1.txt', '2.txt', '3.txt')
