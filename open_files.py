@@ -61,7 +61,9 @@ def reader_files(*files):
             dict_txt.update({i: f})
     for key, val in dict_txt.items():
         with open('total.txt', 'a', encoding='utf-8') as total_file:
-            total_file.writelines(dict_txt)
-        print(f'{key}\n{len(val)}\n{str(val)}')
-    return
-reader_files('1.txt', '2.txt', '3.txt')
+            total_file.writelines([f'{key}\n {len(val)}\n {val}\n'])
+        # print(f'{key}\n{len(val)}\n{str(val)}')
+    return total_file
+
+
+print(reader_files('total.txt'))
