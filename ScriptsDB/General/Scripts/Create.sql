@@ -30,14 +30,14 @@ foreign key (Executer_id) references Executer(Executer_id)
 
 create table if not exists Album_list (Album_id SERIAL primary key,
 Name_A VARCHAR (100),
-Year_A date
+Year_A int
 );
 
 
 
 create table if not exists Track_list (Track_id SERIAL primary key,
 Name_T VARCHAR (50),
-Duration time,
+Duration int,
 Album_id int,
 foreign key (Album_id) references Album_list(Album_id)
 );
@@ -53,5 +53,5 @@ foreign key (Track_id) references Track_list (Track_id)
 
 create table if not exists Collection (Coll_id SERIAL primary key,
 Name_C VARCHAR (50),
-Year_C date
+Year_C int
 );
