@@ -41,6 +41,7 @@ insert into Album_Exct(Album_id, Executer_id) values 	(1,1),
 														(7,7),														
 														(8,8);
 														
+insert into Album_Exct(Album_id, Executer_id) values 	(9,5);
 													
 													
 insert into Album_list(Name_A, Year_A) values   ('альбомба', 2021),
@@ -51,6 +52,8 @@ insert into Album_list(Name_A, Year_A) values   ('альбомба', 2021),
 												('Black ice', 2008),
 												('LA Bussola', 2016),
 												('Посвящение', 2002);
+											
+insert into Album_list(Name_A, Year_A) values   ('Lift me up', 2013);
 												
 											
 insert into Track_list(Name_T,Duration , Album_id) values   ('Встреча', 149 , 1),
@@ -69,7 +72,7 @@ insert into Track_list(Name_T,Duration , Album_id) values   ('Встреча', 1
 															('Милый мой город',155, 8),
 															('кольщик',186 , 8);
 
-
+insert into Track_list( Album_id) values (9);
 
 														
 insert into Collection_Tracks(Coll_id, Track_id) values (1, 2),
